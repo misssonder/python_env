@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>
+    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
+     Search Book
+     </h2>
+    <form class="center" action="/show/" method="post">
+    <p class="center">BookName</p>
+    <input type="text" name="bookname" autocomplete="off" ><br>
+    <p class="center">Author</p>
+    <input type="text" name="author" autocomplete="off" ><br><br>
+    <div style="margin: 0 auto">
+    <input class="btn" type="submit" name="submit" value="Search">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Book inquiries</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='faviconv.ico') }}">
+    <style>
+        input[type=text] {
+        width: 580px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+input[type=text]:focus {
+    width: 600px;
+}
+    </style>
+</head>
+<body>
+<ul class="back">
+  <li class="li_left"><a class="li_a" href="/">主页</a></li>
+  <li class="li_left"><a class="li_a" href="/searchbook">查询</a></li>
+  <li class="li_left"><a class="li_a" href="/login">登录</a></li>
+  <li  class="li_left"><a class="li_a" href="#about">关于</a></li>
+</ul>
+    <h2>
+    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
+     Search Book
+     </h2>
+<form class="center" action="/show/" method="post">
+    <p class="center">BookName</p>
+    <input type="text" name="bookname" autocomplete="off" ><br>
+    <p class="center">Author</p>
+    <input type="text" name="author" autocomplete="off" ><br><br>
+    <div style="margin: 0 auto">
+    <input class="btn" type="submit" name="submit" value="Search">
+    </div>
+</form>
+    <img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}">
+    <footer>
+        <small>&copy; 2019 <a href="https://cn.bing.com/">Bing</a></small>
+    </footer>
+</body>
+</html>
