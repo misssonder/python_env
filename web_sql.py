@@ -72,6 +72,8 @@ class search:
             conn.commit()
             res = cursor.fetchall()
             return res
+    class database:
+        pass
 #增
 class insert:
     def book(self):
