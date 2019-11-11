@@ -1,6 +1,5 @@
 /* 页面整体 */
 body {
-    background-image: url('{{ url_for('static',filename='images/th.jpg' }}');
     margin: auto;
     max-width: 100%;
     font-size: 14px;
@@ -113,4 +112,23 @@ li a:hover:not(.active) {
     background-color: #cce5ff;
     border-color: #b8daff;
     border-radius: 5px;
+}
+/*搜索栏*/
+.search {
+        width: 580px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+.search:focus {
+    width: 600px;
 }
