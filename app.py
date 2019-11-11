@@ -116,7 +116,7 @@ def login():
     else:
         return render_template('login.html')
 @app.route('/logout')
-@login_required  # 用于视图保护，后面会详细介绍
+@login_required  # 用于视图保护
 def logout():
     logout_user()  # 登出用户
     flash('Goodbye.')
