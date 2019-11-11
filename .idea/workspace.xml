@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d99abe14-b063-4036-aac0-c35ff8613ea9" name="Default Changelist" comment="" />
+    <list default="true" id="d99abe14-b063-4036-aac0-c35ff8613ea9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search(before).html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search(before).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,36 +17,37 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python_env$main.coverage" NAME="main Coverage Results" MODIFIED="1571207028599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/2-2/2-2" />
-    <SUITE FILE_PATH="coverage/python_env$app.coverage" NAME="app Coverage Results" MODIFIED="1572854785442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_env$app.coverage" NAME="app Coverage Results" MODIFIED="1573302919687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-570466827">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.25" value="2" />
-          <entry key="project.open.time.27" value="3" />
+          <entry key="project.open.time.27" value="4" />
           <entry key="project.open.time.28" value="3" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="151" />
-          <entry key="py" value="3237" />
+          <entry key="py" value="3239" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="151" />
-          <entry key="Python" value="3234" />
+          <entry key="Python" value="3236" />
           <entry key="SQL" value="3" />
         </counts>
       </usages-collector>
@@ -62,14 +70,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+            <state relative-caret-position="-2777">
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
               <folding>
-                <element signature="e#0#71#0" expanded="true" />
-                <marker date="1572854779121" expanded="true" signature="2219:2357" ph="..." />
-                <marker date="1572854779121" expanded="true" signature="2391:3472" ph="..." />
-                <marker date="1572854779121" expanded="true" signature="3079:3350" ph="..." />
-                <marker date="1572854779121" expanded="true" signature="3403:3472" ph="..." />
+                <marker date="1573302927628" expanded="true" signature="2219:2357" ph="..." />
+                <marker date="1573302927628" expanded="true" signature="2391:3472" ph="..." />
+                <marker date="1573302927628" expanded="true" signature="3079:3350" ph="..." />
+                <marker date="1573302927628" expanded="true" signature="3403:3472" ph="..." />
               </folding>
             </state>
           </provider>
@@ -112,6 +119,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -159,8 +169,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,14 +282,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30898124" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32104558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30311614" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30212766" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,7 +297,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.81276596" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -353,14 +362,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        <state relative-caret-position="-2777">
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
-            <marker date="1572854779121" expanded="true" signature="2219:2357" ph="..." />
-            <marker date="1572854779121" expanded="true" signature="2391:3472" ph="..." />
-            <marker date="1572854779121" expanded="true" signature="3079:3350" ph="..." />
-            <marker date="1572854779121" expanded="true" signature="3403:3472" ph="..." />
+            <marker date="1573302927628" expanded="true" signature="2219:2357" ph="..." />
+            <marker date="1573302927628" expanded="true" signature="2391:3472" ph="..." />
+            <marker date="1573302927628" expanded="true" signature="3079:3350" ph="..." />
+            <marker date="1573302927628" expanded="true" signature="3403:3472" ph="..." />
           </folding>
         </state>
       </provider>
