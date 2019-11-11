@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='faviconv.ico') }}">
     <style>
-        input[type=text] {
+        #text .search {
         width: 580px;
         box-sizing: border-box;
         border: 2px solid #ccc;
@@ -21,7 +21,7 @@
         transition: width 0.4s ease-in-out;
     }
 
-input[type=text]:focus {
+#text .search:focus {
     width: 600px;
 }
     </style>
