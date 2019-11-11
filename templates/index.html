@@ -1,17 +1,13 @@
 {% extends 'base.html' %}
     {% block content %}
     {# 使用 length 过滤器获取 movies 变量的长度 #}
-     <h2>
-    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
-     Index
-    </h2>
     <p >{{ movies|length }} Titles</p>
-    <ul class="movie-list">
+    <ul class="list-group">
         {% for movie in movies %}  {# 迭代 movies 变量 #}
-        <li>{{ movie.title }} - {{ movie.year }}</li>  {# 等同于 movie['title'] #}
+        <li class="list-group-item" style="text-align: center">{{ movie.title }} - {{ movie.year }}</li>  {# 等同于 movie['title'] #}
         {% endfor %}  {# 使用 endfor 标签结束 for 语句 #}
         {% for i in res %}
-        <li>{{ i }}</li>
+        <li class="list-group-item " style="text-align: center">{{ i }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

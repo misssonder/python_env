@@ -1,18 +1,14 @@
 {% extends 'base.html' %}
-    {% block content %}
-    <h2>
-    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
-     Show Information
-    </h2>
-    <ul class="movie-list">
-    {% for i in bookname %}
-    <li>{{ i }}</li>
-    {% endfor %}
-    {% for i in author %}
-    <li>{{ i }}</li>
-    {% endfor %}
-    {% for i in result %}
-    <li>{{ i }}</li>
-    {% endfor %}
+{% block content %}
+    <ul class="list-group">
+        {% for i in bookname %}
+            <li class="list-group-item" style="text-align: center">{{ i }}</li>
+        {% endfor %}
+        {% for i in author %}
+            <li class="list-group-item" style="text-align: center">{{ i }}</li>
+        {% endfor %}
+        {% for i in result %}
+            <li class="list-group-item" style="text-align: center">{{ i }}</li>
+        {% endfor %}
     </ul>
-    {% endblock %}
+{% endblock %}
