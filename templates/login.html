@@ -1,14 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>
-    <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.png') }}">
-    </h2>
-<form method="post" class="center">
-    Username<br>
-    <input type="text" name="username" required><br><br>
-    Password<br>
-    <!-- 密码输入框的 type 属性使用 password，会将输入值显示为圆点 -->
-    <input type="password" name="password" required><br><br>
-    <input type="submit" name="submit" value="Submit">
+    {#<form method="post" class="center">#}
+    {#    Username<br>#}
+    {#    <input type="text" name="username" required><br><br>#}
+    {#    Password<br>#}
+    {#    <!-- 密码输入框的 type 属性使用 password，会将输入值显示为圆点 -->#}
+    {#    <input type="password" name="password" required><br><br>#}
+    {#    <input type="submit" name="submit" value="Submit">#}
+    <form method="post">
+        <div class="form-group row">
+            <label for="exampleInputEmail1" class="col-sm-1 col-form-label">Email address</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-1 col-form-label">Password</label>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 {% endblock %}
 </form>
