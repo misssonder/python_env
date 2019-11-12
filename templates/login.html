@@ -9,7 +9,8 @@
     {#    <input type="submit" name="submit" value="Submit">#}
     <form method="post" style="margin:150px 400px; height: 100%;">
         <div class="form-group row">
-            <label for="exampleInputEmail1" class="col-sm-2 col-form-label">User Name</label>
+            <label for="exampleInputEmail1" class="col-sm-1 col-form-label"> <i class="zi zi_usercircle"
+                                                                                zico="用户圆标"></i></label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="username" placeholder="Enter Username">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone
@@ -18,14 +19,12 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <label for="inputPassword" class="col-sm-1 col-form-label"><i class="zi zi_lock" zico="锁定"></i></label>
             <div class="col-sm-10">
                 <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+        <button type="submit" class="btn btn-primary" style="width:92%">Submit</button>
     </form>
-    <style>
-    </style>
 {% endblock %}
 
