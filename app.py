@@ -109,7 +109,7 @@ def load_user(student_no):
 
 
 @app.route('/')
-# @login_required
+@login_required
 def index():
     return render_template('index.html', name=name, movies=movies, res=res)
 
@@ -147,7 +147,7 @@ def logout():
 
 
 @app.route('/searchbook/', methods=['GET', 'POST'])
-# @login_required
+@login_required
 def searchbook():
     if request.method == 'POST':
         bookname = request.form.get('bookname')
