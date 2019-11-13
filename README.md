@@ -8,7 +8,6 @@ cd flask_venv\Script\activate
 pip install -r requirements
 
 
-activate 
 ```
 
 # use
