@@ -53,7 +53,7 @@
     </div>
 </nav>
 {% for message in get_flashed_messages() %}
-    <div class="alert alert-primary" role="alert">
+    <div class="alert alert-primary" role="alert" style="position: fixed;top: 60px;width: 100%">
         {{ message }}
     </div>
 {% endfor %}
