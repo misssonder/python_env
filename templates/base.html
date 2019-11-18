@@ -22,42 +22,60 @@
     {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">Library</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/searchbook" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Search
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url_for('searchbook') }}">Book</a>
-                    <a class="dropdown-item" href="#">Teacher</a>
-                    <a class="dropdown-item" href="#">Database</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Null</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                {% if current_user.is_authenticated %}
-                    <a class="nav-link mr-1" href="/logout">Logout</a>
-                {% else %}
-                    <a class="nav-link mr-1" href="/login">Login</a>
-                {% endif %}
-            </li>
-        </ul>
-    </div>
-</nav>
-{% for message in get_flashed_messages() %}
-    <div class="alert alert-primary" role="alert" style="position: fixed;top: 60px;width: 100%">
-        {{ message }}
-    </div>
-{% endfor %}
-{% block content %}
-{% endblock %}
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Library</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/searchbook" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Search
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url_for('searchbook') }}">Book</a>
+                        <a class="dropdown-item" href="/searchteacher/">Teacher</a>
+                        <a class="dropdown-item" href="/searchdatabase/">Database</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Null</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    {% if current_user.is_authenticated %}
+                        <a class="nav-link mr-1" href="/logout">Logout</a>
+                    {% else %}
+                        <a class="nav-link mr-1" href="/login">Login</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-primary" role="alert" style="position: fixed;top: 60px;width: 180%">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% block content %}
+    {% endblock %}
+</div>
+
 </body>
 <html>
+<style>
+    body {
+         font-family-sans-serif: {#// Safari for OS X and iOS (San Francisco)#} -apple-system,
+  {#// Chrome < 56 for OS X (San Francisco)#}
+  BlinkMacSystemFont,
+  {#// Windows#}
+  "Segoe UI",
+  {#// Android#}
+  "Roboto",
+  {#// Basic web fallback#}
+  "Helvetica Neue", Arial, sans-serif,
+  {#// Emoji fonts#}
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", default;
+    }
+</style>

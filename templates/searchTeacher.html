@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/showteacher/" method="post" style="margin:150px 400px; height: 100%;">
+        <div class="form-group row">
+            <label for="InputDataBase" class="col-sm-1 col-form-label"><i class="zi zi_chalkboardteacher"
+                                                                          zico="老师黑板"></i>
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="teachername"
+                       placeholder="Enter TeacherName">
+                <small class="form-text text-muted">please write in the name of teacher that you want to search.
+                </small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Search" style="width: 92%;"><i class="zi zi_searchBlack"
+                                                                                            zico="搜索粗黑"></i></button>
+    </form>
+{% endblock %}

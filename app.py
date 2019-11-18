@@ -10,20 +10,6 @@ if WIN:  # 如果是 Windows 系统，使用三个斜线
     prefix = 'sqlite:///'
 else:  # 否则使用四个斜线
     prefix = 'sqlite:////'
-name = 'Tom'
-movies = [
-    {'title': 'My Neighbor Totoro', 'year': '1988'},
-    {'title': 'Dead Poets Society', 'year': '1989'},
-    {'title': 'A Perfect World', 'year': '1993'},
-    {'title': 'Leon', 'year': '1994'},
-    {'title': 'Mahjong', 'year': '1996'},
-    {'title': 'Swallowtail Butterfly', 'year': '1996'},
-    {'title': 'King of Comedy', 'year': '1999'},
-    {'title': 'Devils on the Doorstep', 'year': '1999'},
-    {'title': 'WALL-E', 'year': '2008'},
-    {'title': 'The Pork of Music', 'year': '2012'},
-]
-res = web_sql.search.teacher.teacherName('王')
 app = Flask(__name__)
 # 定义数据库模型
 app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, 'lib.db')
@@ -111,7 +97,7 @@ def load_user(student_no):
 @app.route('/')
 @login_required
 def index():
-    return render_template('index.html', name=name, movies=movies, res=res)
+    return render_template('index.html')
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -146,36 +132,53 @@ def logout():
     return redirect(url_for('index'))  # 重定向回首页
 
 
-@app.route('/searchbook/', methods=['GET', 'POST'])
+@app.route('/searchbook/')
 @login_required
 def searchbook():
-    if request.method == 'POST':
-        bookname = request.form.get('bookname')
-        author = request.form.get('author')
-        return render_template('show.html')
-    else:
-        return render_template('search.html')
+    return render_template('searchBook.html')
+@app.route('/searchdatabase/')
+@login_required
+def searchdDatabase():
+    return render_template('searchDatabase.html')
 
+@app.route('/searchteacher/')
+@login_required
+def searchdTeacher():
+    return render_template('searchTeacher.html')
 
-@app.route('/show/', methods=['GET', 'POST'])
+@app.route('/showbook/', methods=['GET', 'POST'])
+@login_required
 def show():
     if request.method == 'POST':
         bookname = request.form.get('bookname')
         author = request.form.get('author')
         if author.strip() == '':
             resname = web_sql.search.book.book_name(bookname)
-            return render_template('show.html', bookname=resname, author=[], result=[])
+            return render_template('showBook.html', bookname=resname, author=[], result=[])
         if bookname.strip() == '':
             resauthor = web_sql.search.book.writer(author)
-            return render_template('show.html', author=resauthor, bookname=[], result=[])
+            return render_template('showBook.html', author=resauthor, bookname=[], result=[])
         if author.strip() != '' and bookname.strip() != '':
             result = web_sql.search.book.book_name_author(bookname, author)
-            return render_template('show.html', result=result, bookname=[], author=[])
+            return render_template('showBook.html', result=result, bookname=[], author=[])
         if author.strip() == '' and bookname.strip() == '':
             return '请输入查询数据！'
     else:
         return 'Please Input Date！'
+@app.route("/showdatabase/",methods=['POST','GET'])
+@login_required
+def showdatabase():
+    if request.method=='POST':
+        return "Show DataBase!"
+
+@app.route('/showteacher/',methods=['POST','GET'])
+@login_required
+def showteacher():
+    if request.method=='POST':
+        return "Show Teacher!"
+
 @app.route("/<ISBN>/information/")
+@login_required
 def show_information(ISBN):
     book = Book.query.get(str(ISBN))
     return render_template("show_information.html",book=book)
