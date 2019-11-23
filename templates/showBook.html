@@ -1,56 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
-    <ul class="list-unstyled">
-        {#        {% for i in bookname %}#}
-        {#            <li class="list-group-item" style="margin-left:280px; width: 800px;"><i#}
-        {#                    class="zi zi_book" zico="书籍"></i></li>#}
-        {#            <a href="/{{ i[0] }}/information" class="btn btn-outline-secondary zi zi_book" zico="书籍" role="button">{{ i[1] }}</a>#}
+    {#    <ul class="list-unstyled">#}
+    {#            <li class="media ">#}
+    {#                <img class="mr-3" style="width: 100px;height: 73px;"#}
+    {#                     src="{{ url_for('static',filename='images/totoro.gif') }}" alt="Generic placeholder image">#}
+    {#                <div class="media-body" style="margin: 20px;">#}
+    {#                    <h5 class="mt-0 mb-1 ">{{ i[1] }}</h5>#}
+    {#                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras#}
+    {#                    purus odio,#}
+    {#                    vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate#}
+    {#                    fringilla. Donec#}
+    {#                    lacinia congue felis in faucibus.#}
+    {#                </div>#}
+    {#                <div>#}
+    {#                    <a href="/{{ i[0] }}/information" class="btn btn-outline-secondary zi zi_book" zico="书籍"#}
+    {#                       role="button">Information</a>#}
+    {#                    <!-- Button trigger modal -->#}
+    {#                    <br>#}
+    {##}
+    {#                    <button type="button" class="btn btn-primary zi zi_squareBook" zico="方形本子" data-toggle="modal"#}
+    {#                            data-target="#detail" style="width: 100%;">#}
+    {#                        Detail#}
+    {#                    </button>#}
+    {#                </div>#}
+    {#                <!-- Modal -->#}
+    {#                <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel"#}
+    {#                     aria-hidden="true">#}
+    {#                    <div class="modal-dialog" role="document">#}
+    {#                        <div class="modal-content">#}
+    {#                            <div class="modal-header">#}
+    {#                                <h5 class="modal-title" id="detailLabel">Book Detail</h5>#}
+    {#                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+    {#                                    <span aria-hidden="true">&times;</span>#}
+    {#                                </button>#}
+    {#                            </div>#}
+    {#                            <div class="modal-body">#}
+    {#                                ...#}
+    {#                            </div>#}
+    {#                            <div class="modal-footer">#}
+    {#                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </li>#}
+    <div class="row" style="width: 100%">
         {% for i in bookname %}
-            <li class="media ">
-                <img class="mr-3" style="width: 100px;height: 73px;"
-                     src="{{ url_for('static',filename='images/totoro.gif') }}" alt="Generic placeholder image">
-                <div class="media-body" style="margin: 20px;">
-                    <h5 class="mt-0 mb-1 ">{{ i[1] }}</h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
-                    purus odio,
-                    vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
-                    fringilla. Donec
-                    lacinia congue felis in faucibus.
-                </div>
-                <div>
-                    <a href="/{{ i[0] }}/information" class="btn btn-outline-secondary zi zi_book" zico="书籍"
-                       role="button">Information</a>
-                    <!-- Button trigger modal -->
-                    <br>
-
-                    <button type="button" class="btn btn-primary zi zi_squareBook" zico="方形本子" data-toggle="modal"
-                            data-target="#detail" style="width: 100%;">
-                        Detail
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="detailLabel">Book Detail</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+            <div class="card  text-white bg-dark col-xl-3 col-md-4 col-sm-2 col-10 mt-5 ml-4" style="width: 100%">
+                <img class="card-img-top mt-4 ml-5"
+                     src="{{ url_for('static',filename='images/th.jpg') }}"
+                     alt="Card image cap" style="width: 240px;height: 150px">
+                <div class="card-body text-center"">
+                    <div class="card-title">
+                        {{ i[1] }}
+                    </div>
+                    <div class="card-text text-center"">
+                        {{ i[2] }}
                     </div>
                 </div>
-            </li>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+    {#    </ul>#}
     <ul class="list-unstyled">
         {% for i in author %}
             <li class="media ">
@@ -96,9 +107,53 @@
                     </div>
                 </div>
             </li>
+            </ul>
         {% endfor %}
-
+    <ul class="list-unstyled">
         {% for i in result %}
+            <li class="media ">
+                <img class="mr-3" style="width: 100px;height: 73px;"
+                     src="{{ url_for('static',filename='images/totoro.gif') }}" alt="Generic placeholder image">
+                <div class="media-body" style="margin: 20px;">
+                    <h5 class="mt-0 mb-1 ">{{ i[1] }}</h5>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
+                    purus odio,
+                    vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                    fringilla. Donec
+                    lacinia congue felis in faucibus.
+                </div>
+                <div>
+                    <a href="/{{ i[0] }}/information" class="btn btn-outline-secondary zi zi_book" zico="书籍"
+                       role="button">Information</a>
+                    <!-- Button trigger modal -->
+                    <br>
+
+                    <button type="button" class="btn btn-primary zi zi_squareBook" zico="方形本子" data-toggle="modal"
+                            data-target="#detail" style="width: 100%;">
+                        Detail
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="detailLabel">Book Detail</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

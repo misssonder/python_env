@@ -12,6 +12,7 @@ else:  # 否则使用四个斜线
     prefix = 'sqlite:////'
 app = Flask(__name__)
 # 定义数据库模型
+
 app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, 'lib.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # 关闭对模型修改的监控
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', os.urandom(24))
@@ -95,7 +96,7 @@ def load_user(student_no):
 
 
 @app.route('/')
-@login_required
+# @login_required
 def index():
     return render_template('index.html')
 
@@ -125,7 +126,7 @@ def login():
 
 
 @app.route('/logout')
-@login_required  # 用于视图保护
+# @login_required  # 用于视图保护
 def logout():
     logout_user()  # 登出用户
     flash('Goodbye.')
@@ -133,21 +134,21 @@ def logout():
 
 
 @app.route('/searchbook/')
-@login_required
+# @login_required
 def searchbook():
     return render_template('searchBook.html')
 @app.route('/searchdatabase/')
-@login_required
+# @login_required
 def searchdDatabase():
     return render_template('searchDatabase.html')
 
 @app.route('/searchteacher/')
-@login_required
+# @login_required
 def searchdTeacher():
     return render_template('searchTeacher.html')
 
 @app.route('/showbook/', methods=['GET', 'POST'])
-@login_required
+# @login_required
 def show():
     if request.method == 'POST':
         bookname = request.form.get('bookname')
@@ -185,4 +186,4 @@ def show_information(ISBN):
 
 
 app.config['DEBUG'] = True
-app.run(host='0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=5000, debug='True')

@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form action="/showdatabase/" method="post" style="margin:150px 400px; height: 100%;">
-        <div class="form-group row">
-            <label for="InputDataBase" class="col-sm-1 col-form-label"> <i class="zi zi_database" zico="数据库"></i></i>
+    <form action="/showdatabase/" method="post">
+        <div class="form-group">
+            <label for="InputDataBase" class="col-1 col-form-label"> <i class="zi zi_database" zico="数据库"></i></i>
             </label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control zi zi_database" zico="数据库" name="databasename" placeholder="Enter DataBaseName">
+            <div class="col-10">
+                <input type="text" class="form-control zi zi_database" zico="数据库" name="databasename"
+                       placeholder="Enter DataBaseName">
                 <small class="form-text text-muted">please write in the database that you want to search.
                 </small>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary" value="Search" style="width: 92%;"><i class="zi zi_searchBlack"
-                                                                                            zico="搜索粗黑"></i></button>
+        <button type="submit" class="btn btn-primary" value="Search" style="width: 92%;">
+            <i class="zi zi_searchBlack" zico="搜索粗黑"></i>
+        </button>
     </form>
 {% endblock %}
