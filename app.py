@@ -96,7 +96,7 @@ def load_user(student_no):
 
 
 @app.route('/')
-# @login_required
+@login_required
 def index():
     return render_template('index.html')
 
@@ -126,7 +126,7 @@ def login():
 
 
 @app.route('/logout')
-# @login_required  # 用于视图保护
+@login_required  # 用于视图保护
 def logout():
     logout_user()  # 登出用户
     flash('Goodbye.')
@@ -134,21 +134,21 @@ def logout():
 
 
 @app.route('/searchbook/')
-# @login_required
+@login_required
 def searchbook():
     return render_template('searchBook.html')
 @app.route('/searchdatabase/')
-# @login_required
+@login_required
 def searchdDatabase():
     return render_template('searchDatabase.html')
 
 @app.route('/searchteacher/')
-# @login_required
+@login_required
 def searchdTeacher():
     return render_template('searchTeacher.html')
 
 @app.route('/showbook/', methods=['GET', 'POST'])
-# @login_required
+@login_required
 def show():
     if request.method == 'POST':
         bookname = request.form.get('bookname')
